@@ -1,7 +1,7 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { ArrowUpRight, AudioLines, CalendarDays, Check, Clock3, ExternalLink, HeartPulse, MapPin, MessageCircle, Navigation, Search, ShieldCheck, Sparkles, Stethoscope, Phone, X } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
+import { ArrowUpRight, AudioLines, Check, Clock3, ExternalLink, HeartPulse, MapPin, Navigation, Search, ShieldCheck, Sparkles, Stethoscope, Phone, X } from "lucide-react";
 
 type Clinic = {
   id: string;
@@ -52,7 +52,7 @@ export default function Home() {
     }
   }
 
-  useMemo(() => {
+  useEffect(() => {
     void loadClinics();
   }, []);
 
